@@ -1,0 +1,44 @@
+.notfound-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 70vh;
+}
+.notfound-title {
+  font-size: 14em;
+  font-weight: bold;
+  margin: 0;
+}
+.notfound-content {
+  font-size: 2em;
+  text-align: center;
+}
+.redirection-home {
+  color: black;
+  text-decoration: underline;
+}
+.notfound-title,
+.notfound-content {
+  color: rgba(255, 96, 96, 1);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1024px) {
+  .notfound-title {
+    font-size: 10em;
+  }
+  .notfound-content {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  .notfound-title {
+    font-size: 6em;
+  }
+  .notfound-content {
+    font-size: 1.2em;
+  }
+}
