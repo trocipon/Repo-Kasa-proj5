@@ -1,8 +1,24 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Dropdowns({ title, description, defaultOpen = false, className = "" }) {
+export default function Dropdowns({
+  title,
+  description,
+  defaultOpen = false,
+  className = "",
+}) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      if (isOpen) {
+        contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
+      } else {
+        contentRef.current.style.maxHeight = "0px";
+      }
+    }
+  }, [isOpen, description]);
 
   return (
     <div className={`dropdown-container ${isOpen ? "open" : ""} ${className}`}>
@@ -18,7 +34,13 @@ export default function Dropdowns({ title, description, defaultOpen = false, cla
           </span>
         </button>
       </div>
-      <div className="dropdown-content">{description}</div>
+      <div
+        id={`dropdown-${title}`}
+        ref={contentRef}
+        className="dropdown-content"
+      >
+        {description}
+      </div>
     </div>
   );
 }

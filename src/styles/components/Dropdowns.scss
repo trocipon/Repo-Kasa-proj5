@@ -34,7 +34,6 @@
 .dropdown-container.open .chevron-icon {
   transform: rotate(0deg);
 }
-
 .dropdown-content {
   background-color: rgb(246, 246, 246);
   border-radius: 0 0 5px 5px;
@@ -43,20 +42,21 @@
   max-height: 0;
   padding: 0 20px;
   transform: translateY(0);
-  transition: max-height 0.35s ease, padding 0.35s ease;
+  transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
   flex: 0 0 auto;
 }
-
 .dropdown-container.open .dropdown-content {
   padding: 20px;
   max-height: 1000px;
   overflow: auto;
   flex: 1 1 auto;
+  transform: translateY(0);
 }
-
 p {
   margin: 0;
 }
+
+/*MEDIA QUERIES*/
 
 @media (max-width: 1024px) {
   .dropdown-container {
