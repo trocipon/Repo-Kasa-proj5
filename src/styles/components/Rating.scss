@@ -1,0 +1,38 @@
+.rating-container {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e3e3e3;
+  height: 24px;
+  width: 24px;
+}
+.star svg {
+  height: 24px;
+  width: 24px;
+}
+.star.filled {
+  color: #ff6060;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .star,
+  .star svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .star,
+  .star svg {
+    height: 18px;
+    width: 18px;
+  }
+}

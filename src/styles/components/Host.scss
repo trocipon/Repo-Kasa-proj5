@@ -1,0 +1,43 @@
+.host-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+.host-name {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgba(255, 96, 96, 1);
+}
+.host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .host-name {
+    font-size: 1.05em;
+  }
+  .host-picture {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .host-container {
+    justify-content: center;
+    gap: 6px;
+  }
+  .host-name {
+    font-size: 12px;
+  }
+  .host-picture {
+    width: 32px;
+    height: 32px;
+  }
+}

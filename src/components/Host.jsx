@@ -1,0 +1,9 @@
+
+export default function Host({ host }) {
+  return (
+    <div className="host-container">
+      <p className="host-name">{host.name}</p>
+      <img className="host-picture" src={host.picture} />
+    </div>
+  );
+}
