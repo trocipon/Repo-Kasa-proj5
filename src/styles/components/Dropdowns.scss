@@ -1,0 +1,121 @@
+.dropdown-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: #ff6060;
+  padding: 10px 20px 10px 15px;
+  border-radius: 5px;
+}
+.dropdown-title-text {
+  width: fit-content;
+}
+.chevron-button {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  display: inline-flex;
+}
+.chevron-icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: transform 0.25s ease;
+  transform: rotate(180deg);
+}
+.dropdown-container.open .chevron-icon {
+  transform: rotate(0deg);
+}
+
+.dropdown-content {
+  background-color: rgb(246, 246, 246);
+  border-radius: 0 0 5px 5px;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 20px;
+  transform: translateY(0);
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  flex: 0 0 auto;
+}
+
+.dropdown-container.open .dropdown-content {
+  padding: 20px;
+  max-height: 1000px;
+  overflow: auto;
+  flex: 1 1 auto;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .dropdown-container {
+    margin-bottom: 25px;
+  }
+  .dropdown-title {
+    font-size: 1.2rem;
+    padding: 9px 18px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .dropdown-title-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 40px);
+  }
+  .chevron-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .dropdown-content {
+    font-size: 0.95em;
+    padding: 0 16px;
+  }
+  .dropdown-container.open .dropdown-content {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-container {
+    margin-bottom: 20px;
+  }
+  .dropdown-title {
+    font-size: 1rem;
+    padding: 6px 10px;
+    max-height: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .dropdown-title-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 32px);
+  }
+  .chevron-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .dropdown-content {
+    font-size: 0.9em;
+    padding: 0 12px;
+  }
+  .dropdown-container.open .dropdown-content {
+    padding: 12px;
+  }
+}
