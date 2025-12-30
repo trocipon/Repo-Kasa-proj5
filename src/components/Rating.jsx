@@ -1,22 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Rating({ rating }) {
-  const totalStars = 5;
-  const filledStars = Math.min(Math.max(parseInt(rating, 10) || 0, 0), totalStars);
-
-  const stars = Array.from({ length: totalStars }, (_, i) => {
-    const isFilled = i < filledStars;
-    return (
-      <span key={i} className={`star ${isFilled ? "filled" : "empty"}`}>
-        <FontAwesomeIcon icon="fa-solid fa-star" />
-      </span>
-    );
-  });
+  let filledStars = Number(rating) || 0;
+  if (filledStars > 5) filledStars = 5;
+  if (filledStars < 0) filledStars = 0;
 
   return (
     <div className="rating-container">
-      {stars}
+      {Array(5).fill().map((_, i) => (
+        <span key={i} className={`star ${i < filledStars ? "filled" : "empty"}`}>
+          <FontAwesomeIcon icon="fa-solid fa-star" />
+        </span>
+      ))}
     </div>
   );
 }
+
 

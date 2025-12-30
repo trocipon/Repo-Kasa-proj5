@@ -119,6 +119,7 @@ button:focus-visible {
   display: flex;
   border-radius: 25px;
   height: 223px;
+  width: 100%;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -522,11 +523,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 40px; /* align spacing with tablet */
+  gap: 40px;
 }
 
 .rental-page .dropdown-container {
-  width: calc(50% - 20px); /* same as tablet: keeps equal spacing */
+  width: calc(50% - 20px);
 }
 
 /* MEDIA QUERIES */
