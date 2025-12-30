@@ -5,6 +5,7 @@ footer {
   flex-direction: column;
   background-color: black;
   height: 209px;
+  margin-top: 20px;
 }
 .footer-content {
   display: flex;
@@ -26,10 +27,8 @@ footer {
 
 @media (max-width: 1024px) {
   footer {
-    margin: 30px 0 0 0;
     gap: 30px;
-    height: 180px;
-  }
+    height: 180px;  }
   .footer-text {
     font-size: 1.2em;
   }
@@ -37,7 +36,6 @@ footer {
 
 @media (max-width: 768px) {
   footer {
-    margin: 20px 0 0 0;
     gap: 20px;
     height: 150px;
   }
