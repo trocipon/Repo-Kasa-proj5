@@ -1,0 +1,26 @@
+.banner-about {
+  --overlay-opacity: 0.3;
+}
+.dropdowns-section {
+  width: 85%;
+  margin: 50px auto;
+}
+.about-page .dropdown-container {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .dropdowns-section {
+    width: 92%;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdowns-section {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
