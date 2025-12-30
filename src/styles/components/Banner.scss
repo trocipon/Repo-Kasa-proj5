@@ -12,6 +12,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 .bannerContainer::before {
   content: "";
@@ -42,7 +43,7 @@
 
 @media (max-width: 1024px) {
   .bannerContainer {
-    max-height: 160px;
+    height: 160px;
   }
   .banner-overlay {
     font-size: 2rem;
