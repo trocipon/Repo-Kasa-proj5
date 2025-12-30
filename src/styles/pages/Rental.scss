@@ -1,0 +1,119 @@
+.rental-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 10px 20px;
+  margin: 20px 0 30px 0;
+}
+.rental-location {
+  margin: 2px 0;
+}
+.tag-list {
+  margin: 5px 0;
+}
+.rating-container {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: center;
+}
+.host-container {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+.rental-info {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.equipments-list {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.rental-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.rental-page .dropdown-container {
+  width: calc(50% - 40px);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .rental-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .rental-info {
+    flex: 0 0 100%;
+  }
+  .rating-container {
+    order: 1;
+  }
+  .host-container {
+    order: 2;
+    margin-left: auto;
+  }
+  .rental-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .rental-page .dropdown-container {
+    width: calc(50% - 20px);
+    margin-bottom: 0;
+  }
+  .rental-location {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 255px;
+  }
+  .rental-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rental-page .dropdown-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .rental-header {
+    gap: 8px;
+  }
+  .rental-info {
+    flex: 0 0 100%;
+  }
+  .rating-container {
+    order: 1;
+  }
+  .host-container {
+    order: 2;
+    margin-left: auto;
+  }
+  .rental-title {
+    font-size: 1.5rem;
+  }
+  .tag-list {
+    margin-top: 0;
+  }
+  .dropdown-container {
+    margin-bottom: 0;
+  }
+}
