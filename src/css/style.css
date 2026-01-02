@@ -22,11 +22,12 @@ a:hover {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   font-family: "Montserrat";
+  padding: 0;
 }
 
 h1 {
@@ -68,9 +69,11 @@ button:focus-visible {
   }
 }
 .mainContainer {
+  width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 clamp(1rem, 4vw, 4rem);
+  box-sizing: border-box;
 }
 
 .logo {
