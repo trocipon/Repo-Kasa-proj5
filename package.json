@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "sass": "sass ./src/styles/main.scss ./src/css/style.css",
     "sass:watch": "sass --watch ./src/styles/main.scss:./src/css/style.css",
-    "prefix": "postcss ./src/css/style.css --use autoprefixer --map file -d ./src/css/prefixed/"
+    "prefix": "postcss ./src/css/style.css --use autoprefixer --map file -d ./src/css/prefixed/",
+    "minify-css": "npx postcss ./src/css/style.css --use autoprefixer cssnano -o ./src/css/style.min.css"
   },
   "browserslist": "last 4 versions",
   "dependencies": {
@@ -30,10 +31,12 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.23",
+    "cssnano": "^7.1.2",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "postcss-cli": "^11.0.1",
     "vite": "^7.2.4"
   }
 }
