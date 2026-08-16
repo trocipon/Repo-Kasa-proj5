@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Rental from "../pages/Rental";
 import About from "../pages/About";
 import NotFound from "../pages/Notfound";
-import Footer from "./footer";
+import Footer from "./Footer";
 
 export default function App() {
   return (
